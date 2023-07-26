@@ -29,15 +29,12 @@ const About = () => <div className="basic-container">
     and based purely on text parsing, 
     meaning it does not interact with the Python interpreter or intercept run time errors. SIDE-lib is able to identify and 
     track many Python constructs such as variables, function definitions, most built-in functions, built-in methods used with 
-    common data types (e.g. String methods), literals, loops, and common data types (ints, floats, booleans, strings, lists, 
-    dictionaries, tuples, and sets). However, the library is not a complete parser. <strong>The following constructs are not currently handled</strong>:</p>
+    common data types (e.g. String methods), literals, loops, common data types (ints, floats, booleans, strings, lists, 
+    dictionaries, tuples, and sets), and basic user-defined classes (since <a href="https://github.com/Supportive-IDE/SIDE-lib/releases/tag/v1.1.0" target="_blank" rel="noreferrer">v1.1.0</a>). However, the library is not a complete parser. <strong>The following constructs are not currently handled</strong>:</p>
     <ul>
-        <li>User-defined classes</li>
+        <li>Inheritance in user-defined classes</li>
         <li>Imported modules, with the exception of the following built in modules: <code>random</code>, <code>math</code>, <code>string</code>, <code>re</code>, <code>pattern</code>, <code>match</code>, <code>sys</code>.</li>
     </ul>
-    <p>Although support for classes will be added in the near future, the current version of the symptom checker may produce unexpected or unreliable results when analysing files that contain imported modules or 
-        user-defined classes.
-    </p>
     <p>Where possible, SIDE-lib infers the data type of literals and variables and the return type(s) of user-defined functions. It also 
         tracks the return type of most supported built-in functions and methods. <strong>SIDE-lib uses the following rules to determine 
         type</strong>:
