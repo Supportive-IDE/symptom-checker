@@ -41,7 +41,7 @@ const SelectSource = () => {
                     fileName: file.webkitRelativePath === "" ? file.name : file.webkitRelativePath,
                     text: read.target.result,
                     analysis: parse(read.target.result, true, true)
-                }]); 
+                }]);
 
                 setFilesToProcess(filesToProcess.slice(1));
             }
